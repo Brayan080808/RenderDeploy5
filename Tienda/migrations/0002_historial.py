@@ -13,6 +13,18 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunSQL(
+            """
+            DO $$
+            BEGIN
+                IF NOT EXISTS (
+                    SELECT 1 FROM pg_extension WHERE extname = 'pg_trgm'
+                ) THEN
+                    RAISE EXCEPTION 'La extensión pg_trgm no está habilitada';
+                END IF;
+            END $$;
+            """
+        ),
         migrations.CreateModel(
             name='Historial',
             fields=[
