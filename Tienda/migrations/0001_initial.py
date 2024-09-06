@@ -4,6 +4,8 @@ from django.db import migrations, models
 import django.db.models.deletion
 from django.contrib.postgres.operations import TrigramExtension
 
+print('paso por aqui')
+
 class Migration(migrations.Migration):
 
     initial = True
@@ -14,7 +16,6 @@ class Migration(migrations.Migration):
     operations = [
         
         TrigramExtension(),
-        print('paso por aqui'),
         
         migrations.CreateModel(
             name='Categoria_producto',

@@ -5,6 +5,9 @@ import django.contrib.postgres.search
 from django.db import migrations, models
 
 
+print('luego por aqui')
+
+
 class Migration(migrations.Migration):
 
     dependencies = [
