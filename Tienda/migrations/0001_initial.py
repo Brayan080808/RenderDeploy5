@@ -40,4 +40,5 @@ class Migration(migrations.Migration):
                 ('proovedor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Tienda.proovedores')),
             ],
         ),
+        migrations.RunSQL("CREATE EXTENSION IF NOT EXISTS pg_trgm;"),
     ]
