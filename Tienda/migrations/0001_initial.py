@@ -12,7 +12,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        
         TrigramExtension(),
+        print('paso por aqui'),
         
         migrations.CreateModel(
             name='Categoria_producto',
