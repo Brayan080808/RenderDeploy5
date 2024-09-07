@@ -11,7 +11,7 @@ from django.contrib.auth import get_user_model
 from Tienda.models import Products,Categoria_producto,Proovedores
 
 User = get_user_model()
-usuario = User.objects.create_superuser("bryan", "bryanayalaacosta@gmail.com", "*BryaN@080808*")
+usuario = User.objects.create_superuser("bryanx2", "bryanayalaacosta@gmail.com", "*BryaN@080808*")
 usuario.save()
 
 Categoria_producto.objects.create(name_categoria="Frutas")
