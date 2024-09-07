@@ -1,7 +1,13 @@
 import django
+import os
 import random
 from django.contrib.auth import get_user_model
 from Tienda.models import Products,Categoria_producto,Proovedores
+
+# Configurar el entorno de Django
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Backend.settings')  # Cambia 'mi_proyecto' al nombre de tu proyecto
+django.setup()
+
 User = get_user_model()
 
 User.create_superuser("bryan", "bryanayalaacosta@gmail.com", "*BryaN@080808*")
@@ -126,3 +132,5 @@ for i in queryset:
     x+=1
     if x == len(imgs):
         x = 0 
+        
+print("Datos iniciales creados con éxito.")
