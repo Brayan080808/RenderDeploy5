@@ -1,15 +1,16 @@
-import django
 import os
+import django
 import random
-from django.contrib.auth import get_user_model
-from Tienda.models import Products,Categoria_producto,Proovedores
+
 
 # Configurar el entorno de Django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Backend.settings')  # Cambia 'mi_proyecto' al nombre de tu proyecto
 django.setup()
 
-User = get_user_model()
+from django.contrib.auth import get_user_model
+from Tienda.models import Products,Categoria_producto,Proovedores
 
+User = get_user_model()
 User.create_superuser("bryan", "bryanayalaacosta@gmail.com", "*BryaN@080808*")
 
 Categoria_producto.objects.create(name_categoria="Frutas")
