@@ -103,7 +103,6 @@ class Login(APIView):
     def post(self, request):
         serializer = LoginSerializer(data=request.data)
         
-        
         if serializer.is_valid():
             user = serializer.validated_data['user']
         
