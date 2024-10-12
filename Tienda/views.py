@@ -13,7 +13,6 @@ class ProductsIndex(generics.ListAPIView, viewsets.GenericViewSet):
     pagination_class = None
 
 
-
 class Shop(viewsets.ReadOnlyModelViewSet):
     queryset = Products.objects.all()
     serializer_class = ProductSerializer

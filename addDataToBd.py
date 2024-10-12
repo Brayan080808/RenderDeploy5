@@ -9,6 +9,8 @@ django.setup()
 
 from Tienda.models import Products,Categoria_producto,Proovedores
 
+from django.contrib.auth import get_user_model
+
 Categoria_producto.objects.create(name_categoria="Frutas")
 Categoria_producto.objects.create(name_categoria="Verduras")
 Categoria_producto.objects.create(name_categoria="Tubérculos")
@@ -16,6 +18,20 @@ Categoria_producto.objects.create(name_categoria="Legumbres")
 
 Proovedores.objects.create(name_proovedor='Mercadona',ubicacion='Espana')
 Proovedores.objects.create(name_proovedor='Assolim',ubicacion='USA')
+
+
+# Crear un superusuario
+User = get_user_model()
+username = 'bryan'  # Cambia esto al nombre de usuario deseado
+email = 'bryanayala080808@gmail.com'  # Cambia esto al correo electrónico deseado
+password = '080808'  # Cambia esto a una contraseña segura
+
+# Verificar si el superusuario ya existe
+if not User.objects.filter(username=username).exists():
+    User.objects.create_superuser(username=username, email=email, password=password)
+    print(f'Superusuario "{username}" creado exitosamente.')
+else:
+    print(f'El superusuario "{username}" ya existe.')
 
 
         
