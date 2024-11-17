@@ -3,10 +3,10 @@ from psycopg2 import sql
 import os
 
 # Variables de conexión
-HOST = "dpg-cs4ti85umphs73akbbv0-a"               # Reemplaza con el host de tu base de datos
-USERNAME = "dbfreshshopdeploy2_user"        # Reemplaza con tu nombre de usuario
-DATABASE_NAME = "dbfreshshopdeploy2" # Reemplaza con el nombre de tu base de datos
-PASSWORD = "Tl8etFMP7DI5psIoLLqaAjbVcdhlVtsu"     # Reemplaza con tu contraseña
+DATABASE_NAME = "DBFreshshopDeploy3" # Reemplaza con el nombre de tu base de datos
+HOST = "dpg-cssvqu0gph6c7399l27g-a"               # Reemplaza con el host de tu base de datos
+USERNAME = "dbfreshshopdeploy3_user"        # Reemplaza con tu nombre de usuario
+PASSWORD = "8UNBl02v9OYeQB7pQS65EXHy7o4QEG03"     # Reemplaza con tu contraseña
 
 def enable_pg_trgm():
     try:
