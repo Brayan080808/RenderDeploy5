@@ -6,7 +6,7 @@ set -o errexit
 pip install -r requirements.txt
 
 
-# python loaderExtencionDB.py
+python loaderExtencionDB.py
 
 # Convert static asset files
 python manage.py collectstatic --no-input
@@ -14,4 +14,4 @@ python manage.py collectstatic --no-input
 # Apply any outstanding database migrations
 python manage.py migrate
 
-# python addDataToBd.py
+python addDataToBd.py
